@@ -26,8 +26,10 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "./interfaces/IX2EarnRewardsPool.sol";
 
-contract NFTMarketplace is ERC721Enumerable, Ownable {
+
+contract EcoEarn is ERC721Enumerable, Ownable {
     uint256 public currentTokenId;
 
     // Struct to represent an item in the marketplace
@@ -64,7 +66,7 @@ contract NFTMarketplace is ERC721Enumerable, Ownable {
     event RentalEnded(uint256 indexed tokenId, address renter);
     event UserBlacklisted(address indexed user);
 
-    constructor(address initialOwner) ERC721("NFTMarketplace", "NFTM") Ownable(initialOwner) {}
+    constructor(address initialOwner) ERC721("EcoEarn", "NFTM") Ownable(initialOwner) {}
 
     // Function to mint and list an item
     function createListing(

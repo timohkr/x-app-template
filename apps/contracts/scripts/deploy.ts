@@ -52,10 +52,10 @@ export async function deploy() {
 
     const ecoEarnInstance = await ecoEarn.deploy(
         deployer.address,
-        X2EARN_REWARDS_POOL, // mock in solo, from config in testnet/mainnet
-        config.CYCLE_DURATION,
-        config.MAX_SUBMISSIONS_PER_CYCLE,
-        APP_ID, // mock in solo, from config in testnet/mainnet
+        // X2EARN_REWARDS_POOL, // mock in solo, from config in testnet/mainnet
+        // config.CYCLE_DURATION,
+        // config.MAX_SUBMISSIONS_PER_CYCLE,
+        // APP_ID, // mock in solo, from config in testnet/mainnet
     );
     await ecoEarnInstance.waitForDeployment();
 
@@ -64,21 +64,23 @@ export async function deploy() {
 
     console.log('To start using the contract, we need to set the rewards amount and switch to the next cycle');
 
-    const rewardsAmountResult = await (await ecoEarnInstance.setRewardsAmount(1000000000000000000000n)).wait();
+    // COMMMENT OUT for new contract
 
-    console.log('Rewards set reward amount to 1000');
+    // const rewardsAmountResult = await (await ecoEarnInstance.setRewardsAmount(1000000000000000000000n)).wait();
 
-    if (rewardsAmountResult == null || rewardsAmountResult.status !== 1) {
-        throw new Error('Failed to set rewards amount');
-    }
+    // console.log('Rewards set reward amount to 1000');
 
-    const nextCycleResult = await (await ecoEarnInstance.setNextCycle(2n)).wait();
+    // if (rewardsAmountResult == null || rewardsAmountResult.status !== 1) {
+    //     throw new Error('Failed to set rewards amount');
+    // }
 
-    if (nextCycleResult == null || nextCycleResult.status !== 1) {
-        throw new Error('Failed to set next cycle');
-    }
+    // const nextCycleResult = await (await ecoEarnInstance.setNextCycle(2n)).wait();
 
-    console.log('Switched to next cycle');
+    // if (nextCycleResult == null || nextCycleResult.status !== 1) {
+    //     throw new Error('Failed to set next cycle');
+    // }
+
+    // console.log('Switched to next cycle');
 
     // In solo network, we need to add the EcoEarn contract as a distributor
     if (network.name === 'vechain_solo') {
