@@ -4,5 +4,6 @@ export * from "./Icon";
 export * from "./InfoCard";
 export * from "./Instructions";
 export * from "./Dropzone";
+export * from "./ImageDropzone";
 export * from "./Footer";
 export * from "./SubmissionModal";
