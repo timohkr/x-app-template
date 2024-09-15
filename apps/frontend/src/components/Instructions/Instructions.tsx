@@ -3,19 +3,20 @@ import { Step } from "./Step";
 
 const Steps = [
   {
-    icon: "/steps/1.svg",
-    title: "Purchase eco-friendly products",
-    description: "Buy products that are eco-friendly and sustainable.",
+    // icon: "/steps/1.svg",
+    icon: "/steps/1.jpeg",
+    title: "Looking to loan furniture",
+    description: "Loan furniture to give it a second chance.",
   },
   {
-    icon: "/steps/2.svg",
-    title: "Upload the receipt",
-    description: "Upload your receipt and AI will verify the products.",
+    icon: "/steps/22.png",
+    title: "Upload the loaned furniture",
+    description: "Upload your loaned furniture and AI will verify the products.",
   },
   {
     icon: "/steps/3.svg",
     title: "Earn rewards",
-    description: "Earn B3TR for purchasing eco-friendly products.",
+    description: "Earn B3TR for loaning furniture.",
   },
 ];
 

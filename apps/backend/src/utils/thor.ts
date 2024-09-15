@@ -11,4 +11,5 @@ export const ecoEarnContract = thor.contracts.load(
   config.CONTRACT_ADDRESS,
   ECO_SOL_ABI,
   new VeChainPrivateKeySigner(Buffer.from(ADMIN_PRIVATE_KEY), new VeChainProvider(thor)),
+  
 );

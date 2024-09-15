@@ -19,3 +19,4 @@ export const submitReceipt = async (data: ReceiptData): Promise<Response> => {
     throw error;
   }
 };
+

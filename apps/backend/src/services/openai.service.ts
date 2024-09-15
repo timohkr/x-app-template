@@ -10,10 +10,7 @@ export class OpenaiService {
 
     const prompt = `
                     Analyze the image provided. The image MUST satisfy all of the following criteria:
-                        1. It must have as subject a receipt of purchase of at least one product.
-                        2. It must not be a screenshot.
-                        3. It must include the date of the purchase.
-                        4. It must include the name of the store where the purchase was made.
+                        1. It must be an image of a furniture.
                     Please respond always and uniquely with the following JSON object as you are REST API that returns the following object:
                     {
                     "validityFactor": {validityFactorNumber}, // 0-1, 1 if it satisfies all the criteria, 0 otherwise

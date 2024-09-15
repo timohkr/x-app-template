@@ -22,6 +22,7 @@ export const Navbar = () => {
       >
         <HStack flex={1} justifyContent={"start"}>
           <Image src="/vebetterdao-logo.svg" />
+          {/* <Image src="/rent.jpeg" /> */}
         </HStack>
 
         <HStack flex={1} spacing={4} justifyContent={"end"}>
